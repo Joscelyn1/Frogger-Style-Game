@@ -32,16 +32,27 @@ class Player {
         this.sprite = 'images/char-princess-girl.png';
     }
     update() {
-
-    }
+        }
 
     render() {
      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
-    handleInput() {
-
+    handleInput(event) {
+        if (event === 'left' && this.x > 0) {
+            this.x-= 100
+        }
+        if (event === 'right' && this.x < 400) {
+            this.x+= 100
+        }
+        if (event === 'up' && this.y > 0) {
+            this.y-= 85
+        }
+        if (event === 'down' && this.y < 400) {
+            this.y+= 85
+        }
     }
 }
+
 
 
 // Now instantiate your objects.
