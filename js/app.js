@@ -37,6 +37,11 @@ class Player {
         this.sprite = 'images/char-princess-girl.png';
     }
     update() {
+        if (this.y < 50) {
+            this.x = 200;
+            this.y = 400;
+            alert("You win!");
+        }
         }
 
     render() {
