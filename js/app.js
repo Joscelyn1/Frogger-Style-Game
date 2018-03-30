@@ -1,19 +1,20 @@
 
+// class of enemy bugs
 class Enemy {
     constructor(distance, x, y) {
         this.x = x;
         this.y = y;
-        this.sprite = 'images/enemy-bug.png';
+        this.sprite = 'images/enemy-bug.png'; /* the bug picture */
         this.distance = distance;
         this.width = 70;
         this.height = 50;
     }
     update(dt) {
-        this.x += this.distance;
-        if (this.x >= 700) {
+        this.x += this.distance; /* moves enemies horizontally */
+        if (this.x >= 700) { /* loops enemies */
             this.x = -50;
         }
-
+// Collision Detection
         if (this.x < player.x + player.width &&  /* I borrowed from https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection */
             this.x + this.width > player.x &&
             this.y < player.y + player.height &&
@@ -28,16 +29,16 @@ class Enemy {
 
 };
 
-
+// User's character
 class Player {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.sprite = 'images/char-princess-girl.png';
+        this.sprite = 'images/char-princess-girl.png'; /* princess girl image */
         this.width = 50;
         this.height = 50;
     }
-    update() {
+    update() { // resets the user if she reaches the end of the screen
         if (this.y < 50) {
             setTimeout(function(){
                 player.y = 400;
@@ -49,7 +50,7 @@ class Player {
     render() {
      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
-    handleInput(event) {
+    handleInput(event) { // moves player according to user's key presses
         if (event === 'left' && this.x > 0) {
             this.x-= 100
         }
@@ -66,7 +67,7 @@ class Player {
 }
 
 
-
+// instantiates enemies and player
 let e1 = new Enemy(5, 50, 50);
 let e2 = new Enemy(2, 150, 125);
 let e3 = new Enemy(3, 150, 225)
