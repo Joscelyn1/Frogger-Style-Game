@@ -1,4 +1,4 @@
-// Enemies our player must avoid
+
 class Enemy {
     constructor(distance, x, y) {
         this.x = x;
@@ -23,12 +23,6 @@ class Enemy {
 
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
-// Draw the enemy on the screen, required method for game
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
 
 class Player {
     constructor(x, y) {
@@ -38,9 +32,11 @@ class Player {
     }
     update() {
         if (this.y < 50) {
-            this.x = 200;
-            this.y = 400;
-            alert("You win!");
+            setTimeout(function(){
+                player.y = 400;
+                player.x = 200;
+                }, 500);
+
         }
         }
 
@@ -65,9 +61,6 @@ class Player {
 
 
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
 let e1 = new Enemy(1, 50, 50);
 let e2 = new Enemy(2, 150, 125);
 let e3 = new Enemy(3, 150, 225)
@@ -76,8 +69,6 @@ let allEnemies = [e1, e2, e3, e4];
 let player = new Player(200, 400);
 
 
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
