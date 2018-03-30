@@ -36,9 +36,8 @@ class Player {
                 player.y = 400;
                 player.x = 200;
                 }, 500);
-
         }
-        }
+    }
 
     render() {
      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -61,11 +60,12 @@ class Player {
 
 
 
-let e1 = new Enemy(1, 50, 50);
+let e1 = new Enemy(5, 50, 50);
 let e2 = new Enemy(2, 150, 125);
 let e3 = new Enemy(3, 150, 225)
 let e4 = new Enemy(3, 0, 225);
-let allEnemies = [e1, e2, e3, e4];
+let e5 = new Enemy(5, 200, 50);
+let allEnemies = [e1, e2, e3, e4, e5];
 let player = new Player(200, 400);
 
 
