@@ -5,6 +5,8 @@ class Enemy {
         this.y = y;
         this.sprite = 'images/enemy-bug.png';
         this.distance = distance;
+        this.width = 70;
+        this.height = 50;
     }
     update(dt) {
         this.x += this.distance;
@@ -12,9 +14,12 @@ class Enemy {
             this.x = -50;
         }
 
-        if (this.x === player.x && this.y === player.y) {
-            player.x = 200;
-            player.y = 400;
+        if (this.x < player.x + player.width &&  /* I borrowed from https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection */
+            this.x + this.width > player.x &&
+            this.y < player.y + player.height &&
+            this.height + this.y > player.y) {
+                player.x = 200;
+                player.y = 400;
         }
     }
     render() {
@@ -29,6 +34,8 @@ class Player {
         this.x = x;
         this.y = y;
         this.sprite = 'images/char-princess-girl.png';
+        this.width = 50;
+        this.height = 50;
     }
     update() {
         if (this.y < 50) {
