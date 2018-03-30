@@ -14,8 +14,8 @@ class Enemy {
         if (this.x >= 700) { /* loops enemies */
             this.x = -50;
         }
-// Collision Detection
-        if (this.x < player.x + player.width &&  /* I borrowed from https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection */
+// collision detection -- I borrowed from https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+        if (this.x < player.x + player.width &&
             this.x + this.width > player.x &&
             this.y < player.y + player.height &&
             this.height + this.y > player.y) {
@@ -29,7 +29,7 @@ class Enemy {
 
 };
 
-// User's character
+// user's character
 class Player {
     constructor(x, y) {
         this.x = x;
