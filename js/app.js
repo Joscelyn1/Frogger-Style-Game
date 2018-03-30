@@ -11,6 +11,11 @@ class Enemy {
         if (this.x >= 700) {
             this.x = -50;
         }
+
+        if (this.x === player.x && this.y === player.y) {
+            player.x = 200;
+            player.y = 400;
+        }
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -61,7 +66,7 @@ class Player {
 let e1 = new Enemy(1, 50, 50);
 let e2 = new Enemy(2, 150, 125);
 let e3 = new Enemy(3, 150, 225)
-let e4 = new Enemy(3, 0, 225)
+let e4 = new Enemy(3, 0, 225);
 let allEnemies = [e1, e2, e3, e4];
 let player = new Player(200, 400);
 
