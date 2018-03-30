@@ -1,6 +1,20 @@
-frontend-nanodegree-arcade-game
-===============================
+# Classic Arcade Game Clone
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This game resembles the classic arcade game Frogger. Cross to the top of the screen without getting squashed by enemy bugs!
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Installation
+
+1. Download the zip file.
+2. Double click the index.html file.
+3. The game will open in your browser.
+
+## Instructions
+
+Use the arrow keys to move the princess. Help her reach the water at the top of the map. Don't let the bugs hit you.
+
+## Licensing
+
+This game is a student project for [Udacity](www.udacity.com).
+
+It is for private use only.
+
