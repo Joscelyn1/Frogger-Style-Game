@@ -40,28 +40,29 @@ class Player {
     }
     update() { // resets the user if she reaches the end of the screen
         if (this.y < 50) {
+            self = this;
             setTimeout(function(){
-                player.y = 400;
-                player.x = 200;
+                self.y = 400;
+                self.x = 200;
                 }, 500);
         }
     }
 
     render() {
-     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
     handleInput(event) { // moves player according to user's key presses
         if (event === 'left' && this.x > 0) {
-            this.x-= 100
+            this.x-= 101
         }
         if (event === 'right' && this.x < 400) {
-            this.x+= 100
+            this.x+= 101
         }
         if (event === 'up' && this.y > 0) {
-            this.y-= 85
+            this.y-= 83
         }
         if (event === 'down' && this.y < 400) {
-            this.y+= 85
+            this.y+= 83
         }
     }
 }
