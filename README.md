@@ -1,8 +1,10 @@
-# Classic Arcade Game Clone
+# Frogger Style Game
 
 This game resembles the classic arcade game Frogger. Cross to the top of the screen without getting squashed by enemy bugs!
 
 ## Installation
+
+See a live demo [here](https://joscelyn1.github.io/Frogger-Style-Game/).
 
 1. Download the zip file.
 2. Double click the index.html file.
